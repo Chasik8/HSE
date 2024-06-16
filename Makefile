@@ -9,14 +9,26 @@ CFLAGS += -Wall -Werror -Wformat-security -Wignored-qualifiers -Winit-self \
 	-Wstack-usage=4096 -Wmissing-prototypes -Wfloat-equal -Wabsolute-value
 
 CFLAGS += -fsanitize=undefined -fsanitize-undefined-trap-on-error
-
-CC += -m32 -no-pie -fno-pie
-
+CC=gcc
+CC += -m32
+ASMC := nasm
+ASMFLAGS := --gprefix _ -f win32
 LDLIBS = -lm
-
 .PHONY: all
 
-all: integral
+all: run
 
-integral: integral.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDLIBS)
+test: test.o function.o integral.o
+	$(CC) $(CFLAGS) $^ -o $@
+
+run: run.o function.o integral.o
+	$(CC) $(CFLAGS) $^ -o $@
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+%.o : %.asm
+	$(ASMC) $(ASMFLAGS) $< -o $@
+
+clean:
+	del /Q D:\Project\C\VS\HSE\*.o

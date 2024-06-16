@@ -12,16 +12,17 @@ global f1
 global f2
 global f3
 f1:
-    push ebp 
-    mov ebp, esp
-    fld qword[one]
+    finit
+    enter 0,0
     fld qword[ebp+8]
+    fld qword[one]
     fscale
     fld qword[one]
     faddp
-    pop ebp
+    leave
     ret
 f2:
+    finit
     push ebp 
     mov ebp, esp
     fld qword[ebp+8]
@@ -36,6 +37,7 @@ f2:
     pop ebp
     ret
 f3:
+    finit
     push ebp 
     mov ebp, esp
     fld qword[one]
