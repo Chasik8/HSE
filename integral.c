@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <Windows.h>
 #include "integral.h"
 typedef double afunc(double);
 double f(afunc *op1,afunc *op2,double x){
@@ -33,7 +32,9 @@ double root(afunc *op1,afunc *op2, double a, double b, double e) {
             game = false;
         }
     }
+    int koll=0;
     for (; game;) {
+        ++koll;
         fr=f(op1,op2,r);
         fl=f(op1,op2,l);
         c = (l * fr - r * fl) / (fr - fl);
