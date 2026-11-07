@@ -1,0 +1,24 @@
+$ flutter analyze
+Analyzing flutter-todo-navigation-task...                       
+No issues found! (ran in 2.5s)
+
+$ flutter test test/package_check.dart test/behavior_check.dart
+00:00 +0: loading test/package_check.dart
+00:00 +0: test/package_check.dart: flutter_slidable объявлен прямой runtime-зависимостью
+00:00 +1: test/package_check.dart: flutter_slidable установлен и зафиксирован в lock-файле
+00:00 +2: test/behavior_check.dart: (setUpAll)
+00:00 +2: test/behavior_check.dart: свайп показывает действие, но сам не удаляет
+00:01 +3: test/behavior_check.dart: добавление возвращает обрезанное название
+00:02 +4: test/behavior_check.dart: Back закрывает форму без добавления
+00:02 +5: test/behavior_check.dart: пустое название не сохраняется, ошибку можно исправить
+00:02 +6: test/behavior_check.dart: отмена удаления: кнопка
+00:02 +7: test/behavior_check.dart: отмена удаления: Back
+00:02 +8: test/behavior_check.dart: подтверждение удаляет только выбранную задачу
+00:02 +9: test/behavior_check.dart: одинаковые названия остаются разными задачами
+00:02 +10: test/behavior_check.dart: пустой список и повторное добавление
+00:03 +11: test/behavior_check.dart: форма и длинный текст при ширине 320.0
+00:03 +12: test/behavior_check.dart: форма и длинный текст при ширине 800.0
+00:03 +13: test/behavior_check.dart: владелец State удалён во время перехода
+00:03 +14: test/behavior_check.dart: владелец State удалён во время диалога
+00:03 +15: test/behavior_check.dart: (tearDownAll)
+00:03 +15: All tests passed!
