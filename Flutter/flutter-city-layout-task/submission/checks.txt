@@ -1,0 +1,22 @@
+$ flutter analyze
+Analyzing flutter-city-layout-task...                           
+No issues found! (ran in 2.1s)
+
+$ flutter test
+00:00 +0: loading test/smoke_test.dart
+00:00 +0: starter launches
+00:00 +1: All tests passed!
+
+$ flutter test test/behavior_check.dart
+00:00 +0: loading test/behavior_check.dart
+00:00 +0: (setUpAll)
+00:00 +0: ready method completes after 500 ms
+00:00 +1: first load shows progress for 500 ms
+00:00 +2: layout changes do not start another load
+00:01 +3: refresh shows waiting and preserves current mode
+00:01 +4: last city is readable at 320.0 in list
+00:01 +5: last city is readable at 320.0 in grid
+00:01 +6: last city is readable at 800.0 in list
+00:01 +7: last city is readable at 800.0 in grid
+00:01 +8: (tearDownAll)
+00:01 +8: All tests passed!
