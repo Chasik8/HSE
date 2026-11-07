@@ -1,6 +1,6 @@
 # Результат
 
-Web версия, запуск `flutter run -d chrome`, окно 360 на 640.
+Web версия в браузере на ПК, запуск `flutter run -d chrome`, окно 1280 на 720.
 
 ## Видео
 
@@ -12,13 +12,29 @@ Web версия, запуск `flutter run -d chrome`, окно 360 на 640.
 
 ## Скриншоты
 
-| Список | Добавление | Пустой ввод |
-|---|---|---|
-| <img src="list.png" width="240"> | <img src="add.png" width="240"> | <img src="empty_error.png" width="240"> |
+Список
 
-| Свайп | Подтверждение | После удаления |
-|---|---|---|
-| <img src="swipe.png" width="240"> | <img src="delete_dialog.png" width="240"> | <img src="after_delete.png" width="240"> |
+![list](list.png)
+
+Пустой ввод
+
+![empty](empty_error.png)
+
+Добавление
+
+![add](add.png)
+
+Свайп
+
+![swipe](swipe.png)
+
+Подтверждение
+
+![dialog](delete_dialog.png)
+
+После удаления
+
+![after](after_delete.png)
 
 ## Проверки
 
