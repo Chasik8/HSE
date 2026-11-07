@@ -58,7 +58,7 @@ class _TodoPageState extends State<TodoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Задачи')),
+      appBar: AppBar(title: const Text('Мои задачи')),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: openAddPage,
         icon: const Icon(Icons.add),
@@ -132,6 +132,9 @@ class _AddTodoPageState extends State<AddTodoPage> {
               labelText: 'Название',
               errorText: errorText,
             ),
+            onChanged: (_) {
+              if (errorText != null) setState(() => errorText = null);
+            },
             onSubmitted: (_) => save(),
           ),
           const SizedBox(height: 16),
